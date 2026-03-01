@@ -1,0 +1,6 @@
+FTK Imager (Command Line)
+Version: Latest
+Vendor: Exterro
+Download: https://www.exterro.com/digital-forensics-software/ftk-imager
+License: Freeware (Registration Required)
+Description: Command-line version of FTK Imager for scripted/automated forensic image acquisition. Supports logical and physical drive imaging in E01, DD, and other formats.

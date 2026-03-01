@@ -1,0 +1,6 @@
+PostStander (TechFusion Ops)
+Version: Latest
+Vendor: TechFusion Ops (TFO)
+Download: Contact TechFusion Ops or your agency's forensic tool coordinator
+License: Law Enforcement / Government Use Only
+Description: Forensic collection and analysis tool for incident response. Requires a license file for operation.

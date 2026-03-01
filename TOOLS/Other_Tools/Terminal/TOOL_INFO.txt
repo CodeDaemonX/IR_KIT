@@ -1,0 +1,6 @@
+Windows Terminal (Portable)
+Version: Latest
+Vendor: Microsoft
+Download: https://github.com/microsoft/terminal/releases
+License: MIT
+Description: Modern terminal application with tabs, panes, Unicode/UTF-8 support, and GPU-accelerated text rendering. Portable version included for use on systems without it pre-installed.

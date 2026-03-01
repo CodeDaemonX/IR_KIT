@@ -1,0 +1,6 @@
+NotMyFault
+Version: Latest
+Vendor: Microsoft (Sysinternals)
+Download: https://learn.microsoft.com/en-us/sysinternals/downloads/notmyfault
+License: Sysinternals EULA
+Description: Sysinternals tool that can trigger system crashes and hangs for testing and generating crash dumps. Useful for forcing memory dumps for forensic analysis.

@@ -1,0 +1,6 @@
+CamStudio Portable
+Version: Latest
+Vendor: CamStudio.org
+Download: https://camstudio.org/
+License: GPL v2
+Description: Open-source screen recording software. Used in IR for recording screen activity during live triage or evidence collection for documentation purposes.

@@ -1,0 +1,6 @@
+FTK Imager (Portable GUI)
+Version: 4.7
+Vendor: Exterro
+Download: https://www.exterro.com/digital-forensics-software/ftk-imager
+License: Freeware (Registration Required)
+Description: Forensic imaging tool for creating forensic images, previewing data, and mounting images. Portable version requires no installation.

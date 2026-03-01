@@ -1,0 +1,6 @@
+WinPmem
+Version: mini x64 RC2
+Vendor: Velocidex (Mike Cohen)
+Download: https://github.com/Velocidex/WinPmem/releases
+License: Apache 2.0
+Description: Windows physical memory acquisition tool. Kernel-mode driver-based memory acquisition that creates a raw memory dump suitable for analysis with Volatility and other memory forensics tools.

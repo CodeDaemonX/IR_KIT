@@ -1,0 +1,6 @@
+Mouse Jiggle
+Version: Latest
+Vendor: Cerebrate
+Download: https://github.com/cerebrate/mousejiggle/releases
+License: MS-PL (Microsoft Public License)
+Description: Utility that simulates mouse movement to prevent a system from entering sleep/lock mode during forensic collection or monitoring.

@@ -1,0 +1,6 @@
+AVML (Acquire Volatile Memory for Linux)
+Version: Latest
+Vendor: Microsoft
+Download: https://github.com/microsoft/avml/releases
+License: MIT
+Description: Portable volatile memory acquisition tool for Linux. Written in Rust, deployed as a static binary. Acquires memory without knowing the target OS distribution or kernel. Uses LiME output format.

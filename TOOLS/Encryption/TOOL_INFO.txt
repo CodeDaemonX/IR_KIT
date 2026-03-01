@@ -1,0 +1,6 @@
+Encrypted Disk Detector (EDD)
+Version: 3.1.0
+Vendor: Magnet Forensics
+Download: https://www.magnetforensics.com/resources/encrypted-disk-detector/
+License: Freeware
+Description: Command-line tool to detect encrypted volumes on a system (TrueCrypt, BitLocker, PGP, etc.)

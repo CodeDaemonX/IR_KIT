@@ -7,7 +7,7 @@
 
 # Configuration Variables
 SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
-FUJI_PATH="$SCRIPT_DIR/TOOLS/Vol_Acquisition/Fuji/Fuji"
+FUJI_PATH="$SCRIPT_DIR/TOOLS/FS_Acquisition/Fuji/FujiApp.dmg"
 CYLR_PATH="$SCRIPT_DIR/TOOLS/Vol_Acquisition/CyLR/CyLR_mac"
 THOR_PATH="$SCRIPT_DIR/TOOLS/Live_Triage/thor/thor10.7lite-linux/thor-lite-macosx"
 OUTPUT_DIR="$SCRIPT_DIR/$(hostname)"
@@ -42,19 +42,6 @@ echo "$timestamp: Started System Information acquisition"
    echo "$timestamp: Completed System Information acquisition"
 	echo "$timestamp: Completed System Information acquisition" >> "$OUTPUT_DIR/log.txt"
 }
-# Fuji
-acquire_fuji() {
-	mkdir -p "$OUTPUT_DIR/fuji"
-    echo "$timestamp: Started Fuji acquisition"
-	echo "$timestamp: Started Fuji acquisition" >> "$OUTPUT_DIR/log.txt"
-    echo "Output file: $fuji_output_file"
-
-    open "$FUJI_PATH"
-    echo "Fuji has been launched. Complete the acquisition manually, then press Enter to continue..."
-    read -r
-
-    echo "$timestamp: Completed Fuji acquisition"
-	echo "$timestamp: Completed Fuji acquisition" >> "$OUTPUT_DIR/log.txt"
 # CyLR
 acquire_cylr() {
 	mkdir -p "$OUTPUT_DIR/cylr"
@@ -71,6 +58,21 @@ acquire_cylr() {
 
     echo "$timestamp: Completed CyLR Live Response acquisition"
 	echo "$timestamp: Completed CyLR Live Response acquisition" >> "$OUTPUT_DIR/log.txt"
+	
+# Fuji
+acquire_fuji() {
+	mkdir -p "$OUTPUT_DIR/fuji"
+    echo "$timestamp: Started Fuji acquisition"
+	echo "$timestamp: Started Fuji acquisition" >> "$OUTPUT_DIR/log.txt"
+    echo "Output file: $fuji_output_file"
+
+    open "$FUJI_PATH"
+    echo "Fuji has been launched. Complete the acquisition manually, then press Enter to continue..."
+    read -r
+
+    echo "$timestamp: Completed Fuji acquisition"
+	echo "$timestamp: Completed Fuji acquisition" >> "$OUTPUT_DIR/log.txt"
+
 	
 # Thor
 triage_thor() {
@@ -96,15 +98,6 @@ main() {
     # Log system information
     log_system_info
 	
-	# Validate Fuji path
-    if [[ ! -x "$FUJI_PATH" ]]; then
-        echo "Error: Fuji not found at $FUJI_PATH"
-        echo "Please check the Fuji path and ensure it's executable"
-        return 1
-    fi
-	# Perform fuji acquisition
-	acquire_fuji
-	
 	# Validate CyLR path
     if [[ ! -x "$CYLR_PATH" ]]; then
         echo "Error: CyLR not found at $CYLR_PATH"
@@ -113,6 +106,15 @@ main() {
     fi
 	# Perform cylr acquisition
 	acquire_cylr
+	
+	# Validate Fuji path
+    if [[ ! -x "$FUJI_PATH" ]]; then
+        echo "Error: Fuji not found at $FUJI_PATH"
+        echo "Please check the Fuji path and ensure it's executable"
+        return 1
+    fi
+	# Perform fuji acquisition
+	acquire_fuji
 	
 	# Validate thor path
     if [[ ! -x "$THOR_PATH" ]]; then

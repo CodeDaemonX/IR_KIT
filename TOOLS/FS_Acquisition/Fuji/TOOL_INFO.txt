@@ -1,7 +1,7 @@
 Fuji
 Version: Latest
-Vendor: Sumuri
-Download: https://sumuri.com/software/fuji/
-License: Commercial (License Required)
+Vendor: Lazza (Open Source)
+Download: https://github.com/Lazza/Fuji
+License: See GitHub repository
 Platform: macOS only
-Description: macOS forensic acquisition tool with GUI interface. Supports logical and physical acquisition of Mac drives, including Apple Silicon and T2-chip systems. No command-line interface; must be launched and operated manually.
+Description: macOS forensic acquisition tool with GUI interface. Supports logical and physical acquisition of Mac drives. No command-line interface; must be launched and operated manually.

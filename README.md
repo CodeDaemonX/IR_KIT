@@ -1,7 +1,7 @@
 # IR_KIT - Incident Response Toolkit
 
 **Author:** Jeremy Brice - Cyberbyte Consulting  
-**Contact:** Forensics@JeremyBrice.com  
+**Contact:** forensics@cyberbyteconsulting.com  
 **Website:** https://cyberbyteconsulting.com  
 **Last Updated:** 2026-04-28  
 **License:** MIT (scripts only - see LICENSE)

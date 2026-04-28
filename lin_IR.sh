@@ -2,7 +2,7 @@
 
 # Linux Incident Response Script
 # By Jeremy Brice
-# Forensics@JeremyBrice.com
+# forensics@cyberbyteconsulting.com
 # Updated: 2025-03-07
 
 # Configuration Variables

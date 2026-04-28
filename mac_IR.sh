@@ -45,16 +45,13 @@ echo "$timestamp: Started System Information acquisition"
 # Fuji
 acquire_fuji() {
 	mkdir -p "$OUTPUT_DIR/fuji"
-    local fuji_output_file="$OUTPUT_DIR/fuji/fuji_output.zip"
-	local fuji_output_log="$OUTPUT_DIR/fuji/fuji.log"
     echo "$timestamp: Started Fuji acquisition"
 	echo "$timestamp: Started Fuji acquisition" >> "$OUTPUT_DIR/log.txt"
     echo "Output file: $fuji_output_file"
 
-    if ! "$FUJI_PATH" -od "$fuji_output_file" -l "$fuji_output_log"; then
-        echo "Error: Fuji collection failed"
-        return 1
-    fi
+    open "$FUJI_PATH"
+    echo "Fuji has been launched. Complete the acquisition manually, then press Enter to continue..."
+    read -r
 
     echo "$timestamp: Completed Fuji acquisition"
 	echo "$timestamp: Completed Fuji acquisition" >> "$OUTPUT_DIR/log.txt"

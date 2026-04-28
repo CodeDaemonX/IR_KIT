@@ -4,6 +4,15 @@
 :: Updated: 2026-02-10
 
 @echo OFF
+
+:: Check for administrator privileges — required for memory, disk, and registry operations
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+    echo Administrator privileges required. Requesting elevation...
+    powershell -Command "Start-Process cmd.exe -ArgumentList '/c \"%~f0\"' -Verb RunAs -WorkingDirectory '%~dp0'"
+    exit /b
+)
+
 setlocal enabledelayedexpansion
 
 :: Define output folder

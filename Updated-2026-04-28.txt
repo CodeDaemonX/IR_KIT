@@ -284,3 +284,7 @@ PostStander.bat file to launch PostStander-TFO
 Updated:
 win_IR.bat script logic to allow multiple drive acquisition with ftk in series.
 win_IR.bat script to add disk detail within diskpart parameters
+
+2026-04-28
+Updated:
+win_IR.bat script to check for administrator privileges at launch and request elevation if not present

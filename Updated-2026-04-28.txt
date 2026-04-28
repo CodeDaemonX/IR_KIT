@@ -289,3 +289,5 @@ win_IR.bat script to add disk detail within diskpart parameters
 Updated:
 win_IR.bat script to check for administrator privileges at launch and request elevation if not present
 mac_IR.sh Fuji acquisition changed to open GUI and pause for user to complete manually
+Added:
+TOOL_INFO.txt for Fuji under FS_Acquisition

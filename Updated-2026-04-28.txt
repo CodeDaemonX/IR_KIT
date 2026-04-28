@@ -291,3 +291,6 @@ win_IR.bat script to check for administrator privileges at launch and request el
 mac_IR.sh Fuji acquisition changed to open GUI and pause for user to complete manually
 Added:
 TOOL_INFO.txt for Fuji under FS_Acquisition
+Updated:
+README.md macOS workflow corrected to filesystem acquisition via Fuji, updated date
+REQUIREMENTS.md Fuji entry updated with vendor and download link, added install path

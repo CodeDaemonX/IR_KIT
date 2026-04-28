@@ -27,7 +27,7 @@ This document lists all third-party tools used by the IR_KIT scripts. These tool
 |------|---------|----------|----------|---------|
 | FTK Imager (Portable) | 4.7 | Windows | https://www.exterro.com/digital-forensics-software/ftk-imager | Freeware (Registration Required) |
 | FTK Imager (Command Line) | Latest | Windows | https://www.exterro.com/digital-forensics-software/ftk-imager | Freeware (Registration Required) |
-| Fuji (macOS Acquisition) | Latest | macOS | Contact your forensics vendor | Varies |
+| Fuji | Latest | macOS | https://sumuri.com/software/fuji/ | Commercial (License Required) |
 
 ## Live Triage / Threat Scanning
 
@@ -68,6 +68,7 @@ This document lists all third-party tools used by the IR_KIT scripts. These tool
    - `TOOLS/Vol_Acquisition/PostStander-TFO/` - PostStander
    - `TOOLS/FS_Acquisition/FTK Imager_4.7_portable/` - FTK Imager GUI
    - `TOOLS/FS_Acquisition/FTK_Imager-commandline/` - FTK Imager CLI
+   - `TOOLS/FS_Acquisition/Fuji/` - Fuji (macOS)
    - `TOOLS/Live_Triage/thor/` - THOR Lite
    - `TOOLS/Live_Triage/osTriage25/` - osTriage
    - `TOOLS/Encryption/` - EDD

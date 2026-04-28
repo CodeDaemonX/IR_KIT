@@ -3,7 +3,7 @@
 **Author:** Jeremy Brice - Cyberbyte Consulting  
 **Contact:** Forensics@JeremyBrice.com  
 **Website:** https://cyberbyteconsulting.com  
-**Last Updated:** 2026-02-10  
+**Last Updated:** 2026-04-28  
 **License:** MIT (scripts only - see LICENSE)
 
 ---
@@ -65,7 +65,7 @@ Each step is optional and can be skipped or the script can be exited at any poin
 ## macOS Collection Workflow (mac_IR.sh)
 
 1. System information collection
-2. Memory acquisition via Fuji
+2. Filesystem acquisition via Fuji (GUI — launched manually)
 3. Artifact collection via CyLR
 4. Live triage via THOR Lite
 

@@ -9,7 +9,7 @@
 SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
 FUJI_PATH="$SCRIPT_DIR/TOOLS/FS_Acquisition/Fuji/FujiApp.dmg"
 CYLR_PATH="$SCRIPT_DIR/TOOLS/Vol_Acquisition/CyLR/CyLR_mac"
-THOR_PATH="$SCRIPT_DIR/TOOLS/Live_Triage/thor/thor10.7lite-linux/thor-lite-macosx"
+THOR_PATH="$SCRIPT_DIR/TOOLS/Live_Triage/thor/thor-mac/thor-lite-macosx"
 OUTPUT_DIR="$SCRIPT_DIR/$(hostname)"
 TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
 

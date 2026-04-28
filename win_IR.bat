@@ -275,7 +275,7 @@ if /I "%c%" EQU "N" goto :ftkchoice
 if /I "%c%" EQU "E" goto :done
 
 :thor
-cd /D %~dp0TOOLS\Live_Triage\thor\thor10.7lite-win
+cd /D %~dp0TOOLS\Live_Triage\thor\thor-win
 echo %date%-%time%: Started Thor live response 
 echo %date%-%time%: Started Thor live response >> "%output_dir%\log.txt"
 start /wait thor64-lite.exe --quick -e "%output_dir%\thor"

@@ -23,6 +23,11 @@ TOOLS/Other_Tools/Terminal/**
 !TOOLS/**/TOOL_INFO.txt
 !TOOLS/**/TOOL_INFO_*.txt
 
+# Un-ignore Thor platform subdirectories so TOOL_INFO files can be tracked
+!TOOLS/Live_Triage/thor/thor-win/
+!TOOLS/Live_Triage/thor/thor-mac/
+!TOOLS/Live_Triage/thor/thor-linux/
+
 # License files from tools (keep for reference)
 TOOLS/Live_Triage/thor/**/*.lic
 
@@ -44,3 +49,6 @@ Desktop.ini
 # Re-apply TOOL_INFO exceptions after output directory rules
 !TOOLS/**/TOOL_INFO.txt
 !TOOLS/**/TOOL_INFO_*.txt
+!TOOLS/Live_Triage/thor/thor-win/
+!TOOLS/Live_Triage/thor/thor-mac/
+!TOOLS/Live_Triage/thor/thor-linux/

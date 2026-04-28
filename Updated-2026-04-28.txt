@@ -290,9 +290,4 @@ Updated:
 win_IR.bat script to check for administrator privileges at launch and request elevation if not present
 mac_IR.sh Fuji acquisition changed to open GUI and pause for user to complete manually
 mac_IR.sh Fuji path corrected to FS_Acquisition/Fuji/FujiApp.dmg
-mac_IR.sh reordered acquisition sequence: CyLR before Fuji
-Added:
-TOOL_INFO.txt for Fuji under FS_Acquisition
-Updated:
-README.md macOS workflow corrected to filesystem acquisition via Fuji, updated date
-REQUIREMENTS.md Fuji entry corrected with open source vendor and GitHub link
+Thor version and license file

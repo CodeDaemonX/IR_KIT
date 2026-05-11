@@ -3,13 +3,12 @@
 # Mac Incident Response Script
 # By Jeremy Brice
 # forensics@cyberbyteconsulting.com
-# Updated: 2026-01-07
+# Updated: 2026-05-11
 
 # Configuration Variables
 SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
 FUJI_PATH="$SCRIPT_DIR/TOOLS/FS_Acquisition/Fuji/FujiApp.dmg"
 CYLR_PATH="$SCRIPT_DIR/TOOLS/Vol_Acquisition/CyLR/CyLR_mac"
-THOR_PATH="$SCRIPT_DIR/TOOLS/Live_Triage/thor/thor-mac/thor-lite-macosx"
 OUTPUT_DIR="$SCRIPT_DIR/$(hostname)"
 TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
 
@@ -74,24 +73,6 @@ acquire_fuji() {
 	echo "$timestamp: Completed Fuji acquisition" >> "$OUTPUT_DIR/log.txt"
 
 	
-# Thor
-triage_thor() {
-	mkdir -p "$OUTPUT_DIR/thor"	
-    local thor_output_file="$OUTPUT_DIR/thor/thor_output.zip"
-
-    echo "$timestamp: Started Thor Live Triage"
-	echo "$timestamp: Started Thor Live Triage" >> "$OUTPUT_DIR/log.txt"
-    echo "Output file: $thor_output_file"
-
-    if ! "$THOR_PATH" --quick -e "$thor_output_file"; then
-        echo "Error: Thor triage failed"
-        return 1
-    fi
-
-     echo "$timestamp: Completed Thor Live Triage"
-	echo "$timestamp: Completed Thor Live Triage" >> "$OUTPUT_DIR/log.txt"
-}
-
 # Main execution
 main() {
 
@@ -115,17 +96,6 @@ main() {
     fi
 	# Perform fuji acquisition
 	acquire_fuji
-	
-	# Validate thor path
-    if [[ ! -x "$THOR_PATH" ]]; then
-        echo "Error: Thor not found at $THOR_PATH"
-        echo "Please check the Thor path and ensure it's executable"
-        return 1
-    fi
-
-	# Perform thor acquisition
-	triage_thor
-
 echo "$timestamp: Completed Acquisition, review above output for errors"
 echo "$timestamp: Completed Acquisition" >> "$OUTPUT_DIR/log.txt"
 }

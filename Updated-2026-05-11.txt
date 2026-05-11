@@ -1,3 +1,8 @@
+2026-05-11
+Removed:
+thor live triage (win, mac, linux) and updated scripts
+Poststander-TFO
+
 2026-04-28
 Updated:
 win_IR.bat script to check for administrator privileges at launch and request elevation if not present

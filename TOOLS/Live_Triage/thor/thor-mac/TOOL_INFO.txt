@@ -1,6 +1,0 @@
-THOR Lite
-Version: 10.7
-Vendor: Nextron Systems
-Download: https://www.nextron-systems.com/thor-lite/
-License: Freeware (License Key Required)
-Description: IOC and YARA-based compromise assessment scanner. THOR Lite is the free version with community signatures for detecting threats, anomalies, and indicators of compromise on live systems. Available for Windows, Linux, and macOS.

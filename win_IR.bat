@@ -1,11 +1,11 @@
 :: Windows Incident Response Script
 :: By Jeremy Brice
 :: forensics@cyberbyteconsulting.com
-:: Updated: 2026-02-10
+:: Updated: 2026-05-11
 
 @echo OFF
 
-:: Check for administrator privileges — required for memory, disk, and registry operations
+:: Check for administrator privileges � required for memory, disk, and registry operations
 net session >nul 2>&1
 if %errorlevel% neq 0 (
     echo Administrator privileges required. Requesting elevation...
@@ -255,7 +255,7 @@ echo %date%-%time%: Completed Magnet Response acquisition >> "%output_dir%\log.t
 :cylrchoice
 set /P c=[32m Run CyLR Collection? [Y/N][E to End]? [0m
 if /I "%c%" EQU "Y" goto :cylr
-if /I "%c%" EQU "N" goto :thorchoice
+if /I "%c%" EQU "N" goto :ftkchoice
 if /I "%c%" EQU "E" goto :done
 
 :cylr
@@ -266,22 +266,6 @@ echo %date%-%time%: Started CyLR acquisition >> "%output_dir%\log.txt"
 start /wait CyLR_win.exe -od "%output_dir%\cylr" -l "%output_dir%\cylr\CyLR.log"
 echo %date%-%time%: Completed CyLR acquisition
 echo %date%-%time%: Completed CyLR acquisition >> "%output_dir%\log.txt"
-
-:: Live Exploit Analysis
-:thorchoice
-set /P c=[32m Run Thor live triage? [Y/N][E to End]? [0m
-if /I "%c%" EQU "Y" goto :thor
-if /I "%c%" EQU "N" goto :ftkchoice
-if /I "%c%" EQU "E" goto :done
-
-:thor
-cd /D %~dp0TOOLS\Live_Triage\thor\thor-win
-echo %date%-%time%: Started Thor live response 
-echo %date%-%time%: Started Thor live response >> "%output_dir%\log.txt"
-start /wait thor64-lite.exe --quick -e "%output_dir%\thor"
-echo %date%-%time%: Completed Thor live response 
-echo %date%-%time%: Completed Thor live response >> "%output_dir%\log.txt"
-
 :: Acquire Logical Image of Drive
 :ftkchoice
 set /P c=[32m Run FTK File System Acquisition? [Y/N][E to End]? [0m

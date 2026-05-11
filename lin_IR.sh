@@ -3,7 +3,7 @@
 # Linux Incident Response Script
 # By Jeremy Brice
 # forensics@cyberbyteconsulting.com
-# Updated: 2025-03-07
+# Updated: 2026-05-11
 
 # Configuration Variables
 SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
@@ -11,8 +11,6 @@ SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
 AVML_PATH="$SCRIPT_DIR/TOOLS/Vol_Acquisition/avml/avml"
 #echo "AVML path: $AVML_PATH"
 CYLR_PATH="$SCRIPT_DIR/TOOLS/Vol_Acquisition/CyLR/CyLR_linux"
-#echo "CyLR path: $CYLR_PATH"
-THOR_PATH="$SCRIPT_DIR/TOOLS/Live_Triage/thor/thor-linux/thor-lite-linux"
 #echo "CyLR path: $CYLR_PATH"
 OUTPUT_DIR="$SCRIPT_DIR/$(hostname)"
 #echo "Output directory: $OUTPUT_DIR"
@@ -83,25 +81,6 @@ acquire_cylr() {
     echo "$timestamp: Completed Live Response acquisition"
 	echo "$timestamp: Completed Live Response acquisition" >> "$OUTPUT_DIR/log.txt"
 	
-# Function / live triage
-triage_thor() {
-	mkdir -p "$OUTPUT_DIR/thor"	
-    local thor_output_file="$OUTPUT_DIR/thor/thor_output.zip"
-
-    echo "$timestamp: Started Live Triage"
-	echo "$timestamp: Started Live Triage" >> "$OUTPUT_DIR/log.txt"
-    echo "Output file: $thor_output_file"
-
-    if ! "$THOR_PATH" --quick -e "$thor_output_file"; then
-        echo "Error: Thor triage failed"
-        return 1
-    fi
-
-    echo "$timestamp: Completed Live Triage"
-	echo "$timestamp: Completed Live Triage" >> "$OUTPUT_DIR/log.txt"
-
-}
-
 # Main execution
 main() {
 
@@ -128,16 +107,6 @@ main() {
 	# Perform cylr acquisition
 	acquire_cylr
 	
-	# Validate thor path
-    if [[ ! -x "$THOR_PATH" ]]; then
-        echo "Error: Thor not found at $THOR_PATH"
-        echo "Please check the Thor path and ensure it's executable"
-        return 1
-    fi
-
-	# Perform thor acquisition
-	triage_thor
-
 
 echo "$timestamp: Completed Acquisition, review above output for errors"
 echo "$timestamp: Completed Acquisition" >> "$OUTPUT_DIR/log.txt"
